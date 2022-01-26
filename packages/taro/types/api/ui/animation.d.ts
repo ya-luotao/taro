@@ -80,7 +80,7 @@ declare module '../../index' {
      */
     matrix(a: number, b: number, c: number, d: number, tx: number, ty: number): Animation
     /** 同 [transform-function matrix3d](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d)
-     * @supported weapp
+     * @supported weapp, h5
      * @see https://developers.weixin.qq.com/miniprogram/dev/api/ui/animation/Animation.matrix3d.html
      */
     matrix3d(a1: number, b1: number, c1: number, d1: number, a2: number, b2: number, c2: number, d2: number, a3: number, b3: number, c3: number, d3: number, a4: number, b4: number, c4: number, d4: number): Animation
@@ -193,7 +193,7 @@ declare module '../../index' {
       scale: number,
     ): Animation
     /** 对 X、Y 轴坐标进行倾斜
-     * @supported weapp
+     * @supported weapp, h5
      * @see https://developers.weixin.qq.com/miniprogram/dev/api/ui/animation/Animation.skew.html
      */
     skew(
@@ -211,7 +211,7 @@ declare module '../../index' {
       angle: number,
     ): Animation
     /** 对 Y 轴坐标进行倾斜
-     * @supported weapp
+     * @supported weapp, h5
      * @see https://developers.weixin.qq.com/miniprogram/dev/api/ui/animation/Animation.skewY.html
      */
     skewY(
@@ -315,6 +315,7 @@ declare module '../../index' {
     }
   }
 
+  /** @ignore */
   interface KeyFrame {
     /** 关键帧的偏移，范围[0-1] */
     offset?: number
@@ -379,6 +380,8 @@ declare module '../../index' {
     /** Z 方向位移，即 CSS transform translateZ */
     translateZ?: number | string
   }
+
+  /** @ignore */
   interface ClearAnimationOptions {
     /** 基点位置，即 CSS transform-origin */
     transformOrigin?: boolean
@@ -439,12 +442,16 @@ declare module '../../index' {
     /** Z 方向位移，即 CSS transform translateZ */
     translateZ?: boolean
   }
+
+  /** @ignore */
   interface ScrollTimelineKeyframe {
     composite?: 'replace' | 'add' | 'accumulate' | 'auto'
     easing?: string
     offset?: number | null
     [property: string]: string | number | null | undefined
   }
+
+  /** @ignore */
   interface ScrollTimelineOption {
     /** 指定滚动元素的选择器（只支持 scroll-view），该元素滚动时会驱动动画的进度 */
     scrollSource: string
