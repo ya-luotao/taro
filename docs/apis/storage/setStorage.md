@@ -39,8 +39,3 @@ Taro.setStorage({
   data:"value"
 })
 ```
-```tsx
-try {
-  Taro.setStorageSync('key', 'value')
-} catch (e) { }
-```
