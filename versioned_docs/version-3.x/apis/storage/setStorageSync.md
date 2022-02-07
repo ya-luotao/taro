@@ -39,17 +39,6 @@ Taro.setStorage 的同步版本
 
 ## 示例代码
 
-### 示例 1
-
-```tsx
-Taro.setStorage({
-  key:"key",
-  data:"value"
-})
-```
-
-### 示例 2
-
 ```tsx
 try {
   Taro.setStorageSync('key', 'value')
